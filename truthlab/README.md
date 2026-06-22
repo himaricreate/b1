@@ -1,0 +1,104 @@
+# TruthLab: AI-Guided Misinformation Simulator
+
+TruthLab is a Streamlit web app for digital literacy training. It simulates a social media feed where learners evaluate posts and choose whether to **Trust**, **Doubt**, **Report**, or **Verify First**. After each answer, the app provides AI Coach-style feedback explaining the safest reasoning.
+
+> TruthLab is an educational simulator. It does not perfectly detect misinformation and should not replace professional fact-checking, medical advice, legal advice, or cybersecurity review.
+
+## Problem Statement
+
+Students encounter viral claims, scholarship offers, AI-generated media, misleading charts, and phishing attempts across everyday platforms. Many tools focus on passive warnings, but learners need active practice making decisions under realistic uncertainty. TruthLab addresses this by combining scenario-based learning with transparent scoring and personalized feedback.
+
+## Features
+
+- Welcome screen with training goals.
+- Simulated social media feed with original educational scenarios.
+- Challenge mode with 16 scenarios across several misinformation and trust categories.
+- Four response choices: Trust, Doubt, Report, and Verify First.
+- AI Coach-style feedback after each answer.
+- Digital Literacy Index from 0 to 100.
+- Skill breakdown for:
+  - Source Verification
+  - Emotional Manipulation Detection
+  - AI Content Awareness
+  - Scam Detection
+  - Statistical Reasoning
+- Final personalized report with scenario review.
+- Downloadable Markdown report.
+- About and Sources/Credits sections.
+
+## Technologies
+
+- Python
+- Streamlit
+- Pandas
+- Pillow dependency included for future image-based scenario expansion
+- Matplotlib-compatible dependency included for optional charting; the current app uses built-in Streamlit charts
+
+## Project Structure
+
+```text
+truthlab/
+├── app.py
+├── requirements.txt
+├── README.md
+├── sources.md
+├── data/
+│   └── scenarios.csv
+├── modules/
+│   ├── loader.py
+│   ├── scoring.py
+│   ├── feedback.py
+│   └── report.py
+└── assets/
+```
+
+## How to Run Locally
+
+1. Open a terminal in the `truthlab` directory.
+2. Create and activate a virtual environment if desired.
+3. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Run the app:
+
+```bash
+streamlit run app.py
+```
+
+## Deployment Instructions for Streamlit Cloud
+
+1. Push this repository to GitHub.
+2. Go to [Streamlit Community Cloud](https://streamlit.io/cloud).
+3. Choose **New app** and select the repository.
+4. Set the main file path to:
+
+```text
+truthlab/app.py
+```
+
+5. Confirm that `truthlab/requirements.txt` is available so Streamlit Cloud can install dependencies.
+6. Deploy the app and test the challenge flow.
+
+## Original Contributions
+
+- Original scenario dataset written for digital literacy practice.
+- Modular code architecture separating loading, scoring, feedback, and report generation.
+- Difficulty-weighted scoring algorithm for a Digital Literacy Index.
+- Skill-specific performance analytics.
+- Rule-based AI Coach-style explanations that are transparent and do not require paid APIs.
+- Downloadable personalized report for learner reflection.
+
+## External Libraries and Sources
+
+TruthLab uses open-source Python libraries including Streamlit and Pandas. The scenario content is original educational simulation content, not copied from real posts. See [`sources.md`](sources.md) for detailed attribution categories and reference topics.
+
+## Future Improvements
+
+- Add optional image-based scenarios with provenance clues.
+- Add classroom mode for anonymous group analytics.
+- Add localization while keeping a verified English baseline.
+- Add adaptive difficulty that selects future scenarios based on skill gaps.
+- Add unit tests for scoring and report generation.
