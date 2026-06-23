@@ -1,5 +1,6 @@
 # Sources and Credits
 
+TruthLab is an educational Computer Science project built with open-source tools, custom Streamlit/CSS interface work, and original simulated scenario content.
 TruthLab is an educational Computer Science project built with open-source tools and original simulated scenario content.
 
 ## Software and Libraries
@@ -8,6 +9,8 @@ TruthLab is an educational Computer Science project built with open-source tools
 - **Streamlit**: Open-source framework used to build the interactive web app interface.
 - **Pandas**: Open-source data analysis library used to load and organize scenario data.
 - **Pillow**: Listed as a dependency for possible image-based media literacy scenarios and future image handling.
+- **Matplotlib**: Listed as a dependency for optional future visualization; the current version uses Streamlit's built-in chart tools and custom CSS progress visuals.
+- **Custom CSS**: Used inside `st.markdown(..., unsafe_allow_html=True)` to create the dark futuristic interface, glassmorphism cards, neon accents, hover states, and dashboard-style score visuals.
 - **Matplotlib**: Listed as a dependency for optional future visualization; the current version uses Streamlit's built-in chart tools.
 
 ## General Reference Topics
@@ -24,6 +27,7 @@ The scenarios and feedback are original educational simulations inspired by wide
 
 ## Scenario Attribution
 
+All scenarios in `data/scenarios.csv` are fictional and were written specifically for TruthLab. They are not copied real social media posts. Platform names, usernames, and engagement indicators are fictional and intentionally avoid real social media branding. Any similarity to common online misinformation, scam, or phishing patterns is intentional for educational purposes.
 All scenarios in `data/scenarios.csv` are fictional and were written specifically for TruthLab. They are not copied real social media posts. Any similarity to common online misinformation, scam, or phishing patterns is intentional for educational purposes.
 
 ## Limitations
